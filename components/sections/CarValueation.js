@@ -80,11 +80,11 @@ const CarValuation = () => {
               market trends, and <br /> price analysis for buyers and sellers.
             </p>
           </div>
-          <div className="col-md-5 bg-white p-4 rounded shadow">
+          <div className="col-md-5 bg-white p-4 rounded shadow steppers">
             <p className="text-center">
               Provide accurate details for the most precise valuation.
             </p>
-            <div className="col-md-12 py-3">
+            <div className="col-md-12 py-3 ">
               <Stepper activeStep={step} alternativeLabel>
                 {steps.map((label, index) => (
                   <Step key={index}>
