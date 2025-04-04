@@ -18,6 +18,10 @@
         * home 
 
  ------------------------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth !important;
+}
 /*--------- Animation ---------- */
 @import "./../css/animation.css";
 /*--------- Abstracts variable ---------- */
