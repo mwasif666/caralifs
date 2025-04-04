@@ -77,8 +77,7 @@ const CarValuation = () => {
             </h1>
             <p>
               Discover your car's true value with free valuations, detailed
-              market trends, and price analysis for buyers and sellers. Benefit
-              from our partnership with Deal Drive for top accuracy.
+              market trends, and price analysis for buyers and sellers.
             </p>
           </div>
           <div className="col-md-5 bg-white p-4 rounded shadow">

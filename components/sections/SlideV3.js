@@ -44,22 +44,20 @@ export default function SlideV3() {
                 className="wow fadeInUp text-white"
                 data-wow-delay="100ms"
                 data-wow-duration="2000ms"
-              >
-                Save up to <span className="text-red fw-bold">15%</span>
-              </span>
+              ></span>
               <h1
                 className="wow fadeInUp text-white display-1 fw-bold"
                 data-wow-delay="300ms"
                 data-wow-duration="2000ms"
               >
-                Find Perfect Car. <br /> Let’s Go!
+                Car Experts On <br /> The Go
               </h1>
               <p
                 className="wow fadeInUp text-white"
                 data-wow-delay="600ms"
                 data-wow-duration="2000ms"
               >
-                Unlimited mileage · No hidden fees · Free cancellation
+                Complete car expert solutions
               </p>
             </div>
 

@@ -36,11 +36,13 @@ const CalculatorForm = () => {
         <div className="themesflat-container full">
           <div className="calculator-form-wrap">
             <div className="calculator-form">
-              <h2 className="title-section-main wow fadeInUp">Contact Us</h2>
+              <h2 className="title-section-main wow fadeInUp">
+                Talk to our Car expert
+              </h2>
               <form onSubmit={handleSubmit} className="container mt-5 py-4">
                 <div className="row g-3">
                   <div className="col-12 col-md-6">
-                    <label className="form-label">Full Name</label>
+                    <label className="form-label">Name</label>
                     <input
                       type="text"
                       name="name"
@@ -52,6 +54,18 @@ const CalculatorForm = () => {
                     />
                   </div>
                   <div className="col-12 col-md-6">
+                    <label className="form-label">Contact</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      className="form-control"
+                      placeholder="Enter your phone number"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-12">
                     <label className="form-label">Email</label>
                     <input
                       type="email"
@@ -63,20 +77,8 @@ const CalculatorForm = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="col-12 col-md-6">
-                    <label className="form-label">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      className="form-control"
-                      placeholder="Enter your phone number"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <label className="form-label">Category</label>
+                  <div className="col-12">
+                    <label className="form-label">Advice on</label>
                     <div className="d-flex flex-wrap gap-3">
                       <div className="form-check">
                         <input
@@ -89,7 +91,7 @@ const CalculatorForm = () => {
                           onChange={handleChange}
                         />
                         <label className="form-check-label" htmlFor="buy">
-                          Buy
+                          Buying a Car
                         </label>
                       </div>
                       <div className="form-check">
@@ -103,18 +105,54 @@ const CalculatorForm = () => {
                           onChange={handleChange}
                         />
                         <label className="form-check-label" htmlFor="sell">
-                          Sell
+                          Selling a Car
+                        </label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="compare"
+                          name="category"
+                          value="compare"
+                          checked={formData.category.includes("compare")}
+                          onChange={handleChange}
+                        />
+                        <label className="form-check-label" htmlFor="compare">
+                          Comparisons
                         </label>
                       </div>
                     </div>
                   </div>
+                  <div className="col-12 col-md-6">
+                    <label className="form-label">Call Date</label>
+                    <input
+                      type="date"
+                      name="callDate"
+                      className="form-control"
+                      required
+                      value={formData.callDate}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-12 col-md-6">
+                    <label className="form-label">Call Time</label>
+                    <input
+                      type="time"
+                      name="callTime"
+                      className="form-control"
+                      required
+                      value={formData.callTime}
+                      onChange={handleChange}
+                    />
+                  </div>
                   <div className="col-12">
-                    <label className="form-label">Message</label>
+                    <label className="form-label">Note</label>
                     <textarea
                       name="message"
                       className="form-control"
                       rows="4"
-                      placeholder="Write your message"
+                      placeholder="Write your note"
                       required
                       value={formData.message}
                       onChange={handleChange}
@@ -122,7 +160,7 @@ const CalculatorForm = () => {
                   </div>
                   <div className="col-12 d-flex justify-content-between mt-3">
                     <button type="submit" className="payment">
-                      Continue to Payment
+                      Proceed to Payment
                     </button>
                     <button
                       type="reset"
@@ -133,6 +171,8 @@ const CalculatorForm = () => {
                           email: "",
                           phone: "",
                           category: [],
+                          callDate: "",
+                          callTime: "",
                           message: "",
                         })
                       }
