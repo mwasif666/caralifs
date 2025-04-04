@@ -29,7 +29,7 @@ export default function SlideV3() {
 
   return (
     <>
-      <div className="tf-slider-v3" id="sliderSection">
+      <div className="tf-slider-v3 mb-5" id="sliderSection">
         {/* Background Image */}
         <div className="car-background"></div>
 
@@ -74,7 +74,7 @@ export default function SlideV3() {
         .tf-slider-v3 {
           position: relative;
           width: 100%;
-          height: 600px;
+          height: 100vh;
           overflow: hidden;
         }
 
@@ -109,6 +109,44 @@ export default function SlideV3() {
         .themesflat-container {
           position: relative;
           z-index: 2;
+        }
+        /* Mobile View Adjustments */
+        @media (max-width: 768px) {
+          .tf-slider-v3 {
+            height: 100vh; /* Adjusted height for smaller screens */
+          }
+
+          .car-background,
+          .car-lights {
+            width: 100%; /* Full width on small screens */
+            background-size: contain; /* Ensure background scales properly */
+            top: 80px;
+          }
+
+          .themesflat-container {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
+          .col-md-7 {
+            padding: 15px;
+            text-align: center; /* Center the text on smaller screens */
+          }
+
+
+        /* Extra Small View Adjustments (mobile) */
+        @media (max-width: 480px) {
+          .tf-slider-v3 {
+            height: 350px; /* Adjust height for extra small screens */
+          }
+
+          h1 {
+            font-size: 1.25rem; /* Adjust heading font size for extra small screens */
+          }
+
+          p {
+            font-size: 0.875rem; /* Adjust paragraph font size for extra small screens */
+          }
         }
       `}</style>
     </>
