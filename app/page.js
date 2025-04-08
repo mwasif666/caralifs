@@ -1,6 +1,8 @@
 import Layout from "@/components/layout/Layout";
 
 import CalculatorForm from "@/components/sections/CalculatorForm";
+import Card3 from "@/components/sections/Cards3";
+import Cards4 from "@/components/sections/Cards4";
 import CarServices from "@/components/sections/CardServices";
 import CarValuation from "@/components/sections/CarValueation";
 
@@ -19,7 +21,8 @@ export default function Home6() {
         <CarServices />
         <CalculatorForm />
         <CarValuation />
-
+        <Card3 />
+        <Cards4 />
         <TabCarService />
         {/* <PopulerMakes3 /> */}
         {/* <SpecialCar /> */}

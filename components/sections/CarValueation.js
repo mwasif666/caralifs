@@ -71,7 +71,7 @@ const CarValuation = () => {
     <div className="car-valuation-container" id="CarValuation">
       <div className="container py-5">
         <div className="row align-items-center">
-          <div className="col-md-7 text-white">
+          <div className="col-md-8 text-white">
             <h1 className="text-white">
               Know Your Car’s True Market Value for Free
             </h1>
@@ -80,7 +80,7 @@ const CarValuation = () => {
               market trends, and <br /> price analysis for buyers and sellers.
             </p>
           </div>
-          <div className="col-md-5 bg-white p-4 rounded shadow steppers">
+          <div className="col-md-4 bg-white p-4 rounded shadow steppers">
             <p className="text-center">
               Provide accurate details for the most precise valuation.
             </p>

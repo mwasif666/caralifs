@@ -34,11 +34,11 @@ const CalculatorForm = () => {
     <>
       <div className="widget-calculator-form mg-2 my-5" id="CallExpert">
         <div className="themesflat-container full">
-          <div className="calculator-form-wrap">
-            <div className="calculator-form">
-              <h2 className="title-section-main wow fadeInUp">
-                Talk to our Car expert
-              </h2>
+          <h2 className="title-section-main wow fadeInUp">
+            Talk to our Car expert
+          </h2>
+          <div className="row">
+            <div className="calculator-form col-lg-7">
               <form onSubmit={handleSubmit} className="container mt-5 py-4">
                 <div className="row g-3">
                   <div className="col-12 col-md-6">
@@ -65,7 +65,7 @@ const CalculatorForm = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="col-12">
+                  <div className="col-4">
                     <label className="form-label">Email</label>
                     <input
                       type="email"
@@ -74,6 +74,28 @@ const CalculatorForm = () => {
                       placeholder="Enter your email"
                       required
                       value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-12 col-md-4">
+                    <label className="form-label">Call Date</label>
+                    <input
+                      type="date"
+                      name="callDate"
+                      className="form-control"
+                      required
+                      value={formData.callDate}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-12 col-md-4">
+                    <label className="form-label">Call Time</label>
+                    <input
+                      type="time"
+                      name="callTime"
+                      className="form-control"
+                      required
+                      value={formData.callTime}
                       onChange={handleChange}
                     />
                   </div>
@@ -124,40 +146,20 @@ const CalculatorForm = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-12 col-md-6">
-                    <label className="form-label">Call Date</label>
-                    <input
-                      type="date"
-                      name="callDate"
-                      className="form-control"
-                      required
-                      value={formData.callDate}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <label className="form-label">Call Time</label>
-                    <input
-                      type="time"
-                      name="callTime"
-                      className="form-control"
-                      required
-                      value={formData.callTime}
-                      onChange={handleChange}
-                    />
-                  </div>
+
                   <div className="col-12">
                     <label className="form-label">Note</label>
-                    <textarea
+                    <input
+                      type="text"
                       name="message"
                       className="form-control"
-                      rows="4"
                       placeholder="Write your note"
                       required
                       value={formData.message}
                       onChange={handleChange}
-                    ></textarea>
+                    />
                   </div>
+
                   <div className="col-12 d-flex justify-content-between mt-3">
                     <button type="submit" className="payment">
                       Proceed to Payment
@@ -186,10 +188,14 @@ const CalculatorForm = () => {
                 </div>
               </form>
             </div>
-            <div className="calculator-image">
+            <div className="col-lg-5">
               <img
                 src="./assets/images/page/image-form.jpg"
                 alt=""
+                style={{
+                  height: "100%",
+                  objectFit: "cover",
+                }}
                 className="img-fluid"
               />
             </div>
